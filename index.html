@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo Editor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <style>
+      #image{
+        height:"500px";
+        width:"600px";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="editor">
+      <div class="tools">
+        <input type="file" id="load" accept=".jpeg,.jpg,.png"><br>
+        <button type="button" id="save">Save</button>
+        <button type="button" id="reset">Reset</button>
+        <p>
+          <label for="brightness">Brightness</label>
+          <input id="brightness" name="brightness" type="range" min="-100" max="100" value="0">
+        </p>
+        <p>
+          <label for="vibrance">Vibrance</label>
+          <input id="vibrance" name="vibrance" type="range" min="-100" max="100" value="0">
+        </p>
+        <p>
+          <label for="hue">Hue</label>
+          <input id="hue" name="hue" type="range" min="-100" max="100" value="0">
+        </p>
+        <p>
+          <label for="gamma">Gamma</label>
+          <input id="gamma" name="gamma" type="range" min="0" max="10" value="0">
+        </p>
+        <button id="vintage" class="filter">Vintage</button>
+        <button id="lomo" class="filter">Lomo</button>
+        <button id="clarity" class="filter">Clarity</button>
+        <button id="orangePeel" class="filter">Orange Peel</button>
+      </div>
+      <img id="image" class="img" src="image.png">
+    </div>
+  </body>
+</html>
